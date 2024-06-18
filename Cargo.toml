@@ -4,7 +4,10 @@ version = "0.1.0"
 edition = "2021"
 authors = ["FlareFlo"]
 license = "MIT"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "Semver parsing for the WarThunder version strings"
+documentation = "https://docs.rs/wt_version"
+homepage = "https://github.com/Warthunder-Open-Source-Foundation/wt_version"
+repository = "https://github.com/Warthunder-Open-Source-Foundation/wt_version"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
