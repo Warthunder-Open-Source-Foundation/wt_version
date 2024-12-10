@@ -13,7 +13,7 @@ pub struct Version {
 }
 
 impl Version {
-	pub fn new(global: u16, major: u16, minor: u16, patch: u16) -> Self {
+	pub const fn new(global: u16, major: u16, minor: u16, patch: u16) -> Self {
 		Self {
 			global,
 			major,
@@ -22,11 +22,11 @@ impl Version {
 		}
 	}
 
-	pub fn to_u64(&self) -> u64 {
+	pub const fn to_u64(&self) -> u64 {
 		((self.global as u64) << 48) | ((self.major as u64) << 32) | ((self.minor as u64) << 16) | (self.patch as u64)
 	}
 
-	pub fn from_u64(value: u64) -> Version {
+	pub const fn from_u64(value: u64) -> Version {
 		Version {
 			global: ((value >> 48) & 0xFFFF) as u16,
 			major: ((value >> 32) & 0xFFFF) as u16,
